@@ -1,0 +1,4 @@
+EnableVPG=false
+FortranIncludePaths=/quantum\n
+FortranModulePaths=/quantum\n
+eclipse.preferences.version=1
