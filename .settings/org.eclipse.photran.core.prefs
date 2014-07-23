@@ -1,4 +1,7 @@
-EnableVPG=false
+EnableContentAssist=true
+EnableDeclView=true
+EnableHoverTip=true
+EnableVPG=true
 FortranIncludePaths=/quantum\n
 FortranModulePaths=/quantum\n
 eclipse.preferences.version=1
