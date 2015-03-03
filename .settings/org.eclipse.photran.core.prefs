@@ -3,5 +3,5 @@ EnableDeclView=true
 EnableHoverTip=true
 EnableVPG=true
 FortranIncludePaths=/quantum\n
-FortranModulePaths=/quantum\n
+FortranModulePaths=/quantum/plot\n/quantum/mps\n/quantum/LinAlg\n/quantum\n
 eclipse.preferences.version=1

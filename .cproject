@@ -21,12 +21,21 @@
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.MachO64" id="photran.managedbuild.target.gnu.platform.macosx.exe.debug.993870979" name="Debug Platform" osList="macosx" superClass="photran.managedbuild.target.gnu.platform.macosx.exe.debug"/>
 							<builder buildPath="${workspace_loc:/quantum}/Debug" id="photran.managedbuild.target.gnu.builder.macosx.exe.debug.1050799468" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="photran.managedbuild.target.gnu.builder.macosx.exe.debug"/>
 							<tool id="photran.managedbuild.tool.gnu.c.compiler.macosx.exe.debug.160611631" name="GCC C Compiler" superClass="photran.managedbuild.tool.gnu.c.compiler.macosx.exe.debug">
+								<option id="gnu.c.compiler.option.preprocessor.preprocess.643548999" name="Preprocess only (-E)" superClass="gnu.c.compiler.option.preprocessor.preprocess" value="false" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.64271325" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="photran.managedbuild.tool.gnu.fortran.compiler.macosx.exe.debug.680789812" name="GNU Fortran Compiler" superClass="photran.managedbuild.tool.gnu.fortran.compiler.macosx.exe.debug">
 								<inputType id="photran.managedbuild.tool.gnu.fortran.compiler.input.953061467" superClass="photran.managedbuild.tool.gnu.fortran.compiler.input"/>
 							</tool>
 							<tool id="photran.managedbuild.tool.macosx.fortran.linker.macosx.exe.debug.548192503" name="MacOS X Fortran Linker" superClass="photran.managedbuild.tool.macosx.fortran.linker.macosx.exe.debug">
+								<option id="macosx.fortran.link.option.paths.400963200" name="Library search path (-L)" superClass="macosx.fortran.link.option.paths" valueType="stringList">
+									<listOptionValue builtIn="false" value="/usr/local/lib"/>
+								</option>
+								<option id="macosx.fortran.link.option.libs.336196201" name="Libraries (-l)" superClass="macosx.fortran.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="arpack_OSX"/>
+									<listOptionValue builtIn="false" value="lapack"/>
+									<listOptionValue builtIn="false" value="blas"/>
+								</option>
 								<inputType id="photran.managedbuild.tool.macosx.fortran.linker.input.411561664" superClass="photran.managedbuild.tool.macosx.fortran.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -37,9 +46,24 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="photran.managedbuild.config.gnu.fortran.macosx.exe.debug.1370816536.1458703101" name="IR_Precision.f90" rcbsApplicability="disable" resourcePath="LinAlg/IR_Precision.f90" toolsToInvoke="photran.managedbuild.tool.gnu.fortran.compiler.macosx.exe.debug.680789812.1314841769">
+						<tool command="gfortran" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" id="photran.managedbuild.tool.gnu.fortran.compiler.macosx.exe.debug.680789812.1314841769" name="GNU Fortran Compiler" superClass="photran.managedbuild.tool.gnu.fortran.compiler.macosx.exe.debug.680789812">
+							<option id="gnu.fortran.compiler.option.misc.other.1455411801" name="Other flags" superClass="gnu.fortran.compiler.option.misc.other" value="-c -fmessage-length=0 -cpp" valueType="string"/>
+							<inputType id="photran.managedbuild.tool.gnu.fortran.compiler.input.807910091" superClass="photran.managedbuild.tool.gnu.fortran.compiler.input"/>
+						</tool>
+						<tool announcement="Invoking: Resource Custom Build Step" command="" customBuildStep="true" id="org.eclipse.cdt.managedbuilder.ui.rcbs.8375824" name="Resource Custom Build Step">
+							<inputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.inputtype.153917223" name="Resource Custom Build Step Input Type">
+								<additionalInput kind="additionalinputdependency" paths=""/>
+							</inputType>
+							<outputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.outputtype.1876115123" name="Resource Custom Build Step Output Type" outputNames=""/>
+						</tool>
+					</fileInfo>
 					<sourceEntries>
-						<entry excluding="mps" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="test|plot|LinAlg|mps" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="LinAlg"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="mps"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="plot"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="test"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -81,9 +105,24 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="photran.managedbuild.config.gnu.fortran.macosx.exe.release.1311796366.1260839794" name="IR_Precision.f90" rcbsApplicability="disable" resourcePath="LinAlg/IR_Precision.f90" toolsToInvoke="photran.managedbuild.tool.gnu.fortran.compiler.macosx.exe.release.719844667.1106416846">
+						<tool command="gfortran" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" id="photran.managedbuild.tool.gnu.fortran.compiler.macosx.exe.release.719844667.1106416846" name="GNU Fortran Compiler" superClass="photran.managedbuild.tool.gnu.fortran.compiler.macosx.exe.release.719844667">
+							<option id="gnu.fortran.compiler.option.misc.other.998246479" name="Other flags" superClass="gnu.fortran.compiler.option.misc.other" value="-c -fmessage-length=0 -cpp" valueType="string"/>
+							<inputType id="photran.managedbuild.tool.gnu.fortran.compiler.input.1984110042" superClass="photran.managedbuild.tool.gnu.fortran.compiler.input"/>
+						</tool>
+						<tool announcement="Invoking: Resource Custom Build Step" command="" customBuildStep="true" id="org.eclipse.cdt.managedbuilder.ui.rcbs.1980626350" name="Resource Custom Build Step">
+							<inputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.inputtype.1890340621" name="Resource Custom Build Step Input Type">
+								<additionalInput kind="additionalinputdependency" paths=""/>
+							</inputType>
+							<outputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.outputtype.1342197526" name="Resource Custom Build Step Output Type" outputNames=""/>
+						</tool>
+					</fileInfo>
 					<sourceEntries>
-						<entry excluding="mps" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="test|plot|LinAlg|mps" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="LinAlg"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="mps"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="plot"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="test"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -102,5 +141,13 @@
 		<scannerConfigBuildInfo instanceId="photran.managedbuild.config.gnu.fortran.macosx.exe.debug.1370816536;photran.managedbuild.config.gnu.fortran.macosx.exe.debug.1370816536.">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile"/>
 		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/quantum"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/quantum"/>
+		</configuration>
 	</storageModule>
 </cproject>
